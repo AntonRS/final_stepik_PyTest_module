@@ -19,7 +19,6 @@ class TestLoginFromMainPage():
         login_page = LoginPage(browser, browser.current_url)
         login_page.should_be_login_page()
 
-@pytest.mark.my_marker
 def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
     page = MainPage(browser, link)
     page.open()
@@ -28,7 +27,6 @@ def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
     basket_page.should_be_empty_basket_msg()
 
 @pytest.mark.xfail
-@pytest.mark.my_marker
 def test_guest_cant_see_empty_basket_message_after_open_basket_page(browser):
     page = MainPage(browser, link)
     page.open()
