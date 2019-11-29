@@ -36,7 +36,6 @@ def test_guest_cant_see_empty_basket_message_after_open_basket_page(browser):
     return True
 
 @pytest.mark.xfail
-@pytest.mark.my_marker
 def test_empty_basket_message_disappeared_after_open_basket_page(browser):
     page = MainPage(browser, link)
     page.open()
